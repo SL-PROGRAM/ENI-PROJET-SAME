@@ -32,6 +32,11 @@ public class Retrait {
 		this.vente = vente;
 	}
 	
+	@Override
+	public String toString() {
+		return "Retrait [rue=" + rue + ", code_postale=" + code_postale + ", ville=" + ville + ", vente=" + vente + "]";
+	}
+	
 	
 
 }

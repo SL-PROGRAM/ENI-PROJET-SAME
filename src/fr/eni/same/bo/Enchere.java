@@ -39,6 +39,12 @@ public class Enchere {
 		super();
 	}
 	
+	@Override
+	public String toString() {
+		return "Enchere [dateEnchère=" + dateEnchère + ", utilisateurEnchere=" + utilisateurEnchere + ", venteEnchere="
+				+ venteEnchere + "]";
+	}
+	
 	
 	
 }

@@ -109,6 +109,15 @@ public class Vente {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Vente [noVente=" + noVente + ", nomArticle=" + nomArticle + ", description=" + description
+				+ ", dateFinEncheres=" + dateFinEncheres + ", miseAPrix=" + miseAPrix + ", prixVente=" + prixVente
+				+ ", utilisateurAcheteur=" + utilisateurAcheteur + ", utilisateurVendeur=" + utilisateurVendeur
+				+ ", categorie=" + categorie + "]";
+	}
+	
+	
 	
 	
 	
