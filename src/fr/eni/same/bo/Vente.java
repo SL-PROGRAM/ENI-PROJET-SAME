@@ -70,6 +70,46 @@ public class Vente {
 	public void setUtilisateurVendeur(Utilisateur utilisateurVendeur) {
 		this.utilisateurVendeur = utilisateurVendeur;
 	}
+	public Categorie getCategorie() {
+		return categorie;
+	}
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+	
+	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
+			int prixVente, Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.noVente = noVente;
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.miseAPrix = miseAPrix;
+		this.prixVente = prixVente;
+		this.utilisateurAcheteur = utilisateurAcheteur;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix, int prixVente,
+			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.miseAPrix = miseAPrix;
+		this.prixVente = prixVente;
+		this.utilisateurAcheteur = utilisateurAcheteur;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	public Vente() {
+		super();
+	}
+	
+	
+	
 	
 	
 }
