@@ -28,6 +28,17 @@ public class Enchere {
 	}
 	
 	
+	public Enchere(LocalDate dateEnchère, Utilisateur utilisateurEnchere, Vente venteEnchere) {
+		super();
+		this.dateEnchère = dateEnchère;
+		this.utilisateurEnchere = utilisateurEnchere;
+		this.venteEnchere = venteEnchere;
+	}
+	
+	public Enchere() {
+		super();
+	}
+	
 	
 	
 }
