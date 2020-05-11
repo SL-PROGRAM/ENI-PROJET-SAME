@@ -16,7 +16,10 @@ public class Vente {
 	private LocalDate dateFinEncheres;
 	private int miseAPrix;
 	private int prixVente;
-	
+	private Utilisateur utilisateurAcheteur;
+	private Utilisateur utilisateurVendeur;
+	private Categorie categorie;
+
 	
 	
 	public int getNoVente() {
@@ -55,29 +58,20 @@ public class Vente {
 	public void setPrixVente(int prixVente) {
 		this.prixVente = prixVente;
 	}
-	
-	
-	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
-			int prixVente) {
-		super();
-		this.noVente = noVente;
-		this.nomArticle = nomArticle;
-		this.description = description;
-		this.dateFinEncheres = dateFinEncheres;
-		this.miseAPrix = miseAPrix;
-		this.prixVente = prixVente;
+	public Utilisateur getUtilisateurAcheteur() {
+		return utilisateurAcheteur;
+	}
+	public void setUtilisateurAcheteur(Utilisateur utilisateurAcheteur) {
+		this.utilisateurAcheteur = utilisateurAcheteur;
+	}
+	public Utilisateur getUtilisateurVendeur() {
+		return utilisateurVendeur;
+	}
+	public void setUtilisateurVendeur(Utilisateur utilisateurVendeur) {
+		this.utilisateurVendeur = utilisateurVendeur;
 	}
 	
-	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix) {
-		super();
-		this.noVente = noVente;
-		this.nomArticle = nomArticle;
-		this.description = description;
-		this.dateFinEncheres = dateFinEncheres;
-		this.miseAPrix = miseAPrix;
-	}
 	
-	public Vente() {
-		super();
-	}
 }
+	
+	
