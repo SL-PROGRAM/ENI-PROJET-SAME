@@ -104,6 +104,17 @@ public class Vente {
 		this.categorie = categorie;
 	}
 	
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix, int prixVente, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.miseAPrix = miseAPrix;
+		this.prixVente = prixVente;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
 	public Vente() {
 		super();
 	}
