@@ -1,0 +1,10 @@
+.redColor{
+    background-color: red;
+}
+.blueColor{
+    background-color: rgb(74, 186, 251);
+}
+
+.setBtnHeighSize{
+    height: 60px;
+}
