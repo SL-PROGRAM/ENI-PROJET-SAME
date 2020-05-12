@@ -126,11 +126,7 @@ public class Vente {
 				+ ", dateFinEncheres=" + dateFinEncheres + ", miseAPrix=" + miseAPrix + ", prixVente=" + prixVente
 				+ ", utilisateurAcheteur=" + utilisateurAcheteur + ", utilisateurVendeur=" + utilisateurVendeur
 				+ ", categorie=" + categorie + "]";
-	}
-	
-	
-	
-	
+	}	
 	
 }
 	
