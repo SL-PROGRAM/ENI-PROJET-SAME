@@ -32,4 +32,5 @@ public class ServletDetailVente extends HttpServlet {
 		doGet(request, response);
 	}
 
+	
 }

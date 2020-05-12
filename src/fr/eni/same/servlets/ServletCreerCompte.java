@@ -32,4 +32,6 @@ public class ServletCreerCompte extends HttpServlet {
 		doGet(request, response);
 	}
 
+	
+	
 }
