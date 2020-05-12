@@ -8,33 +8,39 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-abstract class ConnectionProvider {
-	private static DataSource dataSource;
-	
+public class ConnectionProvider {
+	static Connection con = null;
+
 	/**
-	 * Au chargement de la classe, la DataSource est recherchée dans l'arbre JNDI
+	 * Ouvre la connexion à la base de donnée
+	 * @return
 	 */
-	static
-	{
+	public static Connection openConnection() {
 		Context context;
 		try {
 			context = new InitialContext();
-			ConnectionProvider.dataSource = (DataSource)context.lookup("java:comp/env/"); //TODO Dans le fichier context.xml le pool de connection doit etre nommé et défini, le nom de la connexion doit etre ajouter apres le env/
-			
-		} catch (NamingException e) {
+			DataSource dataSource = (DataSource) context.lookup("java:comp/env/jdbc/pool_cnx");
+			con = dataSource.getConnection();
+			System.out.println("Connexion ouverte");
+		} catch (NamingException | SQLException e) {
 			e.printStackTrace();
-			throw new RuntimeException("Impossible d'accéder à la base de données");
+			System.out.println("Erreur");
 		}
+		return con;
 	}
-	
 	/**
-	 * Cette méthode retourne une connection opérationnelle issue du pool de connexion
-	 * vers la base de données. 
+	 * Ferme la connexion à la base de donnée
 	 * @return
-	 * @throws SQLException
 	 */
-	public static Connection getConnection() throws SQLException
-	{
-		return ConnectionProvider.dataSource.getConnection();
+	public static Connection closeConnection() {
+		if(con != null) {
+			try {
+				con.close();
+				System.out.println("Connexion fermée");
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return con;
 	}
 }
