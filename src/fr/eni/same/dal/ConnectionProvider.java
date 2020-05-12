@@ -13,6 +13,8 @@ public class ConnectionProvider {
 
 	/**
 	 * Ouvre la connexion à la base de donnée
+	 * Le fichier context.xml doit être réglé avec les 
+	 * paramètres d'accès à la base de donnée de chacun
 	 * @return
 	 */
 	public static Connection openConnection() {

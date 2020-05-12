@@ -13,7 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ConnectionTestServlet
+ * Servlet de connexion à la base de donnée
+ * SERVLET TEST, NE PAS UTILISER EN PRODUCTION
+ * @author etienne
+ *
  */
 @WebServlet("/ServletConnectionTestEtienne")
 public class ServletConnectionTestEtienne extends HttpServlet {
@@ -36,12 +39,7 @@ public class ServletConnectionTestEtienne extends HttpServlet {
 		con = ConnectionProvider.closeConnection();
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }
