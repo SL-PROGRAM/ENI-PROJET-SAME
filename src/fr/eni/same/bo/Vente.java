@@ -6,6 +6,12 @@ package fr.eni.same.bo;
 import java.time.LocalDate;
 
 /**
+ * vente represente l'objet vendu
+ * est en lien avec :
+ * 	La catégorie de vente
+ *  l'utilisateur acheteur
+ *  l'ulisateur vendeur
+ * 
  * @author sl
  *
  */
@@ -77,6 +83,19 @@ public class Vente {
 		this.categorie = categorie;
 	}
 	
+	
+	/**
+	 * constructeur complet
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
 	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
 			int prixVente, Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
 		super();
@@ -91,8 +110,20 @@ public class Vente {
 		this.categorie = categorie;
 	}
 	
-	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix, int prixVente,
-			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+	/**
+	 * constructeur sans noVente (id) avec mise a prix et prix de vente
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
+			int prixVente, Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
 		super();
 		this.nomArticle = nomArticle;
 		this.description = description;
@@ -104,13 +135,142 @@ public class Vente {
 		this.categorie = categorie;
 	}
 	
-	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix, int prixVente, Utilisateur utilisateurVendeur, Categorie categorie) {
+	/**
+	 * constructeur avec noVente (id) avec mise a prix et sans prix de vente
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
+			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.noVente = noVente;
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.miseAPrix = miseAPrix;
+		this.utilisateurAcheteur = utilisateurAcheteur;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	/**
+	 * constructeur sans noVente (id) avec mise a prix et sans  prix de vente
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres, int miseAPrix,
+			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
 		super();
 		this.nomArticle = nomArticle;
 		this.description = description;
 		this.dateFinEncheres = dateFinEncheres;
 		this.miseAPrix = miseAPrix;
-		this.prixVente = prixVente;
+		this.utilisateurAcheteur = utilisateurAcheteur;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	/**
+	 * constructeur avec noVente (id) sans mise a prix et sans prix de vente
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres,
+			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.noVente = noVente;
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.utilisateurAcheteur = utilisateurAcheteur;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	/**
+	 * constructeur sans noVente (id) avec mise a prix et sans  prix de vente
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres,
+			Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+
+	/**
+	 * constructeur avec noVente (id) sans mise a prix, sans prix de vente, sans acheteur
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(int noVente, String nomArticle, String description, LocalDate dateFinEncheres,
+			Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.noVente = noVente;
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.utilisateurVendeur = utilisateurVendeur;
+		this.categorie = categorie;
+	}
+	
+	/**
+	 * constructeur sans noVente (id) avec mise a prix et sans  prix de vente, sans acheteur
+	 * @param noVente
+	 * @param nomArticle
+	 * @param description
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 * @param prixVente
+	 * @param utilisateurAcheteur
+	 * @param utilisateurVendeur
+	 * @param categorie
+	 */
+	public Vente(String nomArticle, String description, LocalDate dateFinEncheres,
+			Utilisateur utilisateurAcheteur, Utilisateur utilisateurVendeur, Categorie categorie) {
+		super();
+		this.nomArticle = nomArticle;
+		this.description = description;
+		this.dateFinEncheres = dateFinEncheres;
+		this.utilisateurAcheteur = utilisateurAcheteur;
 		this.utilisateurVendeur = utilisateurVendeur;
 		this.categorie = categorie;
 	}

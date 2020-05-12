@@ -1,6 +1,6 @@
 package fr.eni.same.bo;
 /**
- * BO Utilisateur
+ * BO Utilisateur contient l'ensemble des informations personnelles de l'utilisateurs
  * @author sl
  *
  */
@@ -95,6 +95,21 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 	
+	/**
+	 * Constructeur complet avec numéro de téléphone
+	 * @param noUtilisateur
+	 * @param pseudo
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param motDePasse
+	 * @param credit
+	 * @param administrateur
+	 */
 	public Utilisateur(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
 			String rue, String codePostal, String ville, String motDePasse, int credit, boolean administrateur) {
 		super();
@@ -112,6 +127,20 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 	
+	/**
+	 * constructeur sans noUtilisateur(id) et avec numéro de tél
+	 * @param pseudo
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param motDePasse
+	 * @param credit
+	 * @param administrateur
+	 */
 	public Utilisateur(String pseudo, String nom, String prenom, String email, String telephone,
 			String rue, String codePostal, String ville, String motDePasse, int credit, boolean administrateur) {
 		super();
@@ -128,6 +157,20 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 	
+	/**
+	 * constructeur complet sans numéro de tél
+	 * @param pseudo
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param motDePasse
+	 * @param credit
+	 * @param administrateur
+	 */
 	public Utilisateur(int noUtilisateur, String pseudo, String nom, String prenom, String email,
 			String rue, String codePostal, String ville, String motDePasse, int credit, boolean administrateur) {
 		super();
@@ -144,6 +187,21 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 	
+	/**
+	 * /**
+	 * constructeur sans noUtilisateur(id) et sans numéro de tél
+	 * @param pseudo
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param telephone
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param motDePasse
+	 * @param credit
+	 * @param administrateur
+	 */
 	public Utilisateur(String pseudo, String nom, String prenom, String email,
 			String rue, String codePostal, String ville, String motDePasse, int credit, boolean administrateur) {
 		super();

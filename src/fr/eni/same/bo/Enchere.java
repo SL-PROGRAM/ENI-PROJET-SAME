@@ -1,18 +1,23 @@
 package fr.eni.same.bo;
 
 import java.time.LocalDate;
-
+/**
+ * Enchere permet de faire le lien entre l'utilisateur qui fait l'enchere et le produit vendu
+ * sert a enregistrer la date et heure de l'enchere a la ms
+ * @author sl
+ *
+ */
 public class Enchere {
-	private LocalDate dateEnchère;
+	private LocalDate dateEnchere; //doit prendre en compte les ms
 	private Utilisateur utilisateurEnchere;
 	private Vente venteEnchere;
 	
 	
-	public LocalDate getDateEnchère() {
-		return dateEnchère;
+	public LocalDate getDateEnchere() {
+		return dateEnchere;
 	}
-	public void setDateEnchère(LocalDate dateEnchère) {
-		this.dateEnchère = dateEnchère;
+	public void setDateEnchere(LocalDate dateEnchere) {
+		this.dateEnchere = dateEnchere;
 	}
 	public Utilisateur getUtilisateurEnchere() {
 		return utilisateurEnchere;
@@ -27,10 +32,15 @@ public class Enchere {
 		this.venteEnchere = venteEnchere;
 	}
 	
-	
-	public Enchere(LocalDate dateEnchère, Utilisateur utilisateurEnchere, Vente venteEnchere) {
+	/**
+	 * Constructeur
+	 * @param dateEnchere
+	 * @param utilisateurEnchere
+	 * @param venteEnchere
+	 */
+	public Enchere(LocalDate dateEnchere, Utilisateur utilisateurEnchere, Vente venteEnchere) {
 		super();
-		this.dateEnchère = dateEnchère;
+		this.dateEnchere = dateEnchere;
 		this.utilisateurEnchere = utilisateurEnchere;
 		this.venteEnchere = venteEnchere;
 	}
@@ -41,7 +51,7 @@ public class Enchere {
 	
 	@Override
 	public String toString() {
-		return "Enchere [dateEnchère=" + dateEnchère + ", utilisateurEnchere=" + utilisateurEnchere + ", venteEnchere="
+		return "Enchere [dateEnchere=" + dateEnchere + ", utilisateurEnchere=" + utilisateurEnchere + ", venteEnchere="
 				+ venteEnchere + "]";
 	}
 	
