@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ServletMonProfil
  */
-@WebServlet("/ServletMonCompte")
-public class ServletMonCompte extends HttpServlet {
+@WebServlet("/ServletMonProfil")
+public class ServletMonProfil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	/**
@@ -21,7 +21,7 @@ public class ServletMonCompte extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//TODO : passer les fichiers en .jsp lorsque se sera prêt
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/MonCompte.html");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/MonProfil.html");
 		rd.forward(request, response);
 	}
 
