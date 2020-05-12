@@ -5,6 +5,8 @@ package fr.eni.same.bo;
  * @author sl
  *
  */
+
+//TODO SUPPRIMER 
 public class Bo {
 	/**
 	 * Les attributs de cette class represente les column de la table bo dans la DataBase

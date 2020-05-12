@@ -1,8 +1,13 @@
 package fr.eni.same.bo;
-
+/**
+ * Permet d'enregistrer le lieu de retrait d'une vente
+ * une vente n'a pas forcement de lieu de retrait
+ * @author sl
+ *
+ */
 public class Retrait {
 	private String rue;
-	private String code_postale;
+	private String codePostal;
 	private String ville;
 	private Vente vente;
 	
@@ -13,11 +18,11 @@ public class Retrait {
 	public void setRue(String rue) {
 		this.rue = rue;
 	}
-	public String getCode_postale() {
-		return code_postale;
+	public String getCodePostal() {
+		return codePostal;
 	}
-	public void setCode_postale(String code_postale) {
-		this.code_postale = code_postale;
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
 	}
 	public String getVille() {
 		return ville;
@@ -33,5 +38,27 @@ public class Retrait {
 	}
 	
 	
-
+	/**
+	 * Constructeur complet
+	 * @param rue
+	 * @param codePostal
+	 * @param ville
+	 * @param vente
+	 */
+	public Retrait(String rue, String codePostal, String ville, Vente vente) {
+		super();
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.vente = vente;
+	}
+	
+	public Retrait() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "Retrait [rue=" + rue + ", codePostal=" + codePostal + ", ville=" + ville + ", vente=" + vente + "]";
+	}
 }
